@@ -173,45 +173,6 @@ public class registeration extends Controller
 }
 
 
-public class login extends model
-{
-  protected $email;
-  protected $password;
-
-  public function __construct()
-  {
-
-  }
-
-
-  public function userlogin()
-  {
-
-  }
-
-
-}
-
-
-
-public class logout extends model
-{
-  protected $email;
-  protected $password;
-
-  public function __construct()
-  {
-
-  }
-
-
-  public function userlogout()
-  {
-
-  }
-
-}
-
 public class usermodify extends registeration
 {
   public function modifyuser()
