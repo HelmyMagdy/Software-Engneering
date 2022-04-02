@@ -45,7 +45,9 @@ class mysqli extends dbconfig
 
     public function dbconnect()
     {
-      //*****
+      $this -> connectionString = mysqli_connect($this -> serverName,$this -> userName,$this -> passCode);
+      mysqli_select_db($this -> databaseName,$this -> connectionString);
+      return $this -> connectionString;
     }
 
     public function dbdisconnect()
@@ -61,19 +63,50 @@ class mysqli extends dbconfig
 
     public function selectall()
     {
-      //*****
+       $this -> sqlQuery = 'SELECT * FROM '.$this -> databaseName.'.'.$tableName;
+       $this -> dataSet = mysqli_query($this -> sqliQuery,$this -> connectionString);
+       return $this -> dataSet;
     }
 
 
     public function selectwhere()
     {
-      //*****
+      $this -> sqlQuery = 'SELECT * FROM '.$tableName.' WHERE '.$rowName.' '.$operator.' ';
+      if($valueType == 'int') {
+        $this -> sqlQuery .= $value;
+      }
+      else if($valueType == 'char')   {
+        $this -> sqlQuery .= "'".$value."'";
+      }
+      $this -> dataSet = mysqli_query($this -> sqliQuery,$this -> connectionString);
+      $this -> sqlQuery = NULL;
+      return $this -> dataSet;
     }
 
 
     public function insertinto()
     {
-      //*****
+      $i = NULL;
+
+      $this -> sqlQuery = 'INSERT INTO '.$tableName.' VALUES (';
+      $i = 0;
+      while($values[$i]["val"] != NULL && $values[$i]["type"] != NULL) {
+        if($values[$i]["type"] == "char") {
+          $this -> sqlQuery .= "'";
+          $this -> sqlQuery .= $values[$i]["val"];
+          $this -> sqlQuery .= "'";
+        }
+        else if($values[$i]["type"] == 'int') {
+          $this -> sqlQuery .= $values[$i]["val"];
+        }
+        $i++;
+        if($values[$i]["val"] != NULL)  {
+          $this -> sqlQuery .= ',';
+        }
+      }
+      $this -> sqlQuery .= ')';
+      mysqli_query($this -> sqliQuery,$this ->connectionString);
+      return $this -> sqlQuery;
     }
 
   }
