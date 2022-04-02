@@ -112,70 +112,6 @@ class mysqli extends dbconfig
   }
 
 
-  public class registeration extends model
-  {
-    protected $username;
-    protected $password;
-    protected $email;
-    protected $phonenumber;
-    protected $image;
-    protected $usertype;
-
-
-    public function __construct()
-    {
-
-    }
-
-    public function useradd()
-    {
-
-    }
-
-
-  }
-
-
-  public class login extends model
-  {
-    protected $email;
-    protected $password;
-
-    public function __construct()
-    {
-
-    }
-
-
-    public function userlogin()
-    {
-
-    }
-
-
-  }
-
-
-
-  public class logout extends model
-  {
-    protected $email;
-    protected $password;
-
-    public function __construct()
-    {
-
-    }
-
-
-    public function userlogout()
-    {
-
-    }
-
-  }
-
-
   public class product extends registeration
   {
     protected $productid;
@@ -202,20 +138,4 @@ class mysqli extends dbconfig
 
   }
 
-
-  public class usermodify extends registeration
-  {
-    public function modifyuser()
-    {
-
-    }
-  }
-
-
-  public class deleteuser extends registeration
-  {
-    public function deleteuser()
-    {
-
-    }
   }
