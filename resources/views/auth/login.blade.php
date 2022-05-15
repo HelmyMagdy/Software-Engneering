@@ -1,48 +1,120 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Eama group</title>
 
-        <x-jet-validation-errors class="mb-4" />
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Construction Html5 Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Themefisher">
+    <meta name="generator" content="Themefisher Constra HTML Template v1.0">
 
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/eama.logo.png" />
+
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="body">
+    <section class="signin-page account">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="block text-center">
+                        <a class="logo" href="/">
+                            <img src="images/eama.logo.png" alt="">
+                        </a>
+                        <x-jet-validation-errors class="mb-4" />
+
+                        @if (session('status'))
+                            <div class="mb-4 font-medium text-sm text-green-600">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+
+                            <div class="form-group">
+                                <x-jet-input id="email" placeholder="Email Address" class="form-control" type="email"
+                                    name="email" :value="old('email')" required autofocus />
+                            </div>
+
+                            <div class="form-group">
+                                <x-jet-input id="password" placeholder="Password" class="form-control" type="password"
+                                    name="password" required autocomplete="current-password" />
+                            </div>
+
+                            <br>
+                            <label for="remember_me" class="flex items-center">
+                                <x-jet-checkbox id="remember_me" name="remember" />
+                                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                            </label>
+
+
+                            <div class="flex items-center justify-end mt-4">
+                                <x-jet-button class="btn btn-main text-center">
+                                    <div class="text-center">
+                                        {{ __('Log in') }}
+                                </x-jet-button>
+                            </div><br>
+                            @if (Route::has('forgot-password'))
+                                <a class="underline text-sm text-gray-600 hover:text-gray-900"
+                                    href="{{ route('forgot-password') }}">
+                                    {{ __('Forgot your password?') }}
+                                </a>
+                            @endif
+                    </div>
+
+
+                    </form>
+                </div>
+
             </div>
-        @endif
+        </div>
+        </div>
+        </div>
+    </section>
+    <!--
+    Essential Scripts
+    =====================================-->
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    <!-- Main jQuery -->
+    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.1 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Touchpin -->
+    <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <!-- Instagram Feed Js -->
+    <script src="plugins/instafeed/instafeed.min.js"></script>
+    <!-- Video Lightbox Plugin -->
+    <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Count Down Js -->
+    <script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
 
-            <div>
-                <x-jet-label for="email" value="{{ __('Email') }}" />
-                <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+    <!-- slick Carousel -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="plugins/slick/slick-animation.min.js"></script>
 
-            <div class="mt-4">
-                <x-jet-label for="password" value="{{ __('Password') }}" />
-                <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
+    <!-- Google Mapl -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-jet-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('forgot-password'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('forgot-password') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-jet-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-jet-button>
-            </div>
-        </form>
-    </x-jet-authentication-card>
-</x-guest-layout>
+    <!-- Main Js File -->
+    <script src="js/script.js"></script>
