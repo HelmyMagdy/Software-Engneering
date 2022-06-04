@@ -47,8 +47,16 @@
                         <x-slot name="logo">
                             <x-jet-validation-errors class="mb-4" />
                             <form method="POST" action="{{ route('register') }}">
+                                <!--csrf,(cross-site request forgery) is a type of attack, where the attacker performes an action of sending a request
+                                to the system by the victime's trusted and authorized account.
+                                Laravel provides protection with the CSRF attacks by generating a CSRF token.
+                                This CSRF token is generated automatically for each user-->
                                 @csrf
                                 <div class="form-group">
+                                    <!--Old() method used to show the old inputs to the session
+                                    required autofocus autocomplete="" used to enable the autocomplete ,
+                                    allows the browser to predict the value-->
+
                                     <x-jet-input id="name" class="form-control" placeholder="Username" type="text"
                                         name="name" :value="old('name')" required autofocus autocomplete="name" />
                                 </div>

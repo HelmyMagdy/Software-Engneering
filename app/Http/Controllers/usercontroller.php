@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class usercontroller extends Controller
 {
+    
     public function user()
     { 
         return view('index');
     }
+
+    
 }

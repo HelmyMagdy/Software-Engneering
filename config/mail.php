@@ -5,6 +5,9 @@ return [
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
+    Laravel provides a simple API over the popular SwiftMailer library.
+    The mail configuration file is config/mail.php (this file) ,
+    and contains options allowing you to change your SMTP host, port, and credentials.
     |--------------------------------------------------------------------------
     |
     | This option controls the default mailer that is used to send any email
@@ -90,6 +93,19 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
+    /*Here we made the host email 'eama.local@example.com' which will be responsibel
+    for sending verfication emails through smtp protocol Also we changed some settings in the (.env) file like 
+
+    MAIL_MAILER=smtp=>(Simple mail transfeer protocol)
+    MAIL_HOST=smtp.gmail.com=>(Host who will send the email(Gmail))
+    MAIL_PORT=465=>(Gmail SSl Port)
+    MAIL_USERNAME=eama.local@gmail.com=>(The Host email username)
+    MAIL_PASSWORD=bfmw6u4j=>(The host email password)
+    MAIL_ENCRYPTION=ssl=>(ssl provides encryption for TCP/IP connections SSL encrypts all of the communication between your phone and your mail server.)
+    MAIL_FROM_ADDRESS="eama.local@gmail.com"=>(The Host email address)
+    MAIL_FROM_NAME="Eama"*/
+
+
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'eama.local@example.com'),

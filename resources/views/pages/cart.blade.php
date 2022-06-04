@@ -1,11 +1,27 @@
+<!--
+THEME: Aviato | E-commerce template
+VERSION: 1.0.0
+AUTHOR: Themefisher
+
+HOMEPAGE: https://themefisher.com/products/aviato-e-commerce-template/
+DEMO: https://demo.themefisher.com/aviato/
+GITHUB: https://github.com/themefisher/Aviato-E-Commerce-Template/
+
+WEBSITE: https://themefisher.com
+TWITTER: https://twitter.com/themefisher
+FACEBOOK:
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>Eama group</title>
+    <title>Eama | Cart</title>
 
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -44,9 +60,6 @@
                     <div class="contact-number">
                         <i class="tf-ion-ios-telephone"></i>
                         <span>0129- 12323-123123</span>
-
-
-
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12 col-sm-4">
@@ -61,9 +74,7 @@
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
                                     font-size="40" font-family="AustinBold, Austin" font-weight="bold">
-                                    <g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
 
-                                    </g>
                                 </g>
                             </svg>
                         </a>
@@ -132,7 +143,6 @@
                         </li><!-- / Search -->
 
 
-
                     </ul><!-- / .nav .navbar-nav .navbar-right -->
                 </div>
             </div>
@@ -179,7 +189,7 @@
                                         <ul>
                                             <li class="dropdown-header">Pages</li>
                                             <li role="separator" class="divider"></li>
-                                            <li><a href="/products">Products</a></li>
+                                            <li><a href="/products">Shop</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <!-- <li><a href="cart.html">Cart</a></li> -->
                                             <!-- <li><a href="confirmation.html">Confirmation</a></li> -->
@@ -229,19 +239,17 @@
                                             <li><a href="order.html">Orders</a></li>
                                             <!-- <li><a href="address.html">Address</a></li> -->
                                             <li><a href="profile-details.html">Profile Details</a></li>
-                                            <li><a href="../../../../../controller/chatbot/bot.php">Chat</a></li>
                                         </ul>
                                     </div>
 
                                     <!-- Utility -->
                                     <div class="col-sm-3 col-xs-12">
                                         <ul>
-                                            <li class="dropdown-header">User</li>
+                                            <li class="dropdown-header">Utility</li>
                                             <li role="separator" class="divider"></li>
-                                            <li>
-                                                <x-app-layout>
-                                                </x-app-layout>
-                                            </li>
+                                            <li><a href="login.html">Login </a></li>
+                                            <li><a href="signin.html">Signup </a></li>
+                                            <li><a href="forget-password.html">Forget Password</a></li>
                                         </ul>
                                     </div>
 
@@ -260,7 +268,17 @@
 
 
 
-
+                        <!-- Shop -->
+                        <!-- <li class="dropdown dropdown-slide">
+      <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+       role="button" aria-haspopup="true" aria-expanded="false">Elements <span
+        class="tf-ion-ios-arrow-down"></span></a>
+      <ul class="dropdown-menu">
+       <li><a href="typography.html">Typography</a></li>
+       <li><a href="buttons.html">Buttons</a></li>
+       <li><a href="alerts.html">Alerts</a></li>
+      </ul>
+     </li>/ Blog -->
                     </ul><!-- / .nav .navbar-nav -->
 
                 </div>
@@ -269,61 +287,91 @@
         </nav>
     </section>
 
-    <div class="hero-slider">
-        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/tb-2.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 text-center">
-                        <!-- <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTS</p> -->
-                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Your personal hygiene
-                            health
-                            <br> is our responsibility
-                        </h1>
-                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                            href="shop.html">Shop Now</a>
+    <section class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="content">
+                        <h1 class="page-name">Cart</h1>
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active">cart</li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/df-1.jpg);">
+    </section>
+
+
+
+    <div class="page-wrapper">
+        <div class="cart shopping">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 text-left">
-                        <!-- <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTS</p> -->
-                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">We offer you our
-                            <br> best products
-                        </h1>
-                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                            href="shop.html">Shop Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/tb-3.png);">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 text-right">
-                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Always be care about
-                            yourself
-                            <br> and we will help you
-                        </h1>
-                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn"
-                            href="shop.html">Shop Now</a>
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="block">
+                            <div class="product-list">
+                                <form method="post">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="">Item Name</th>
+                                                <th class="">Item Price</th>
+                                                <th class="">Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="">
+                                                <td class="">
+                                                    <div class="product-info">
+                                                        <img width="80" src="images/shop/cart/cart-1.jpg" alt="" />
+                                                        <a href="#!">Sunglass</a>
+                                                    </div>
+                                                </td>
+                                                <td class="">$200.00</td>
+                                                <td class="">
+                                                    <a class="product-remove" href="#!">Remove</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="">
+                                                <td class="">
+                                                    <div class="product-info">
+                                                        <img width="80" src="images/shop/cart/cart-2.jpg" alt="" />
+                                                        <a href="#!">Airspace</a>
+                                                    </div>
+                                                </td>
+                                                <td class="">$200.00</td>
+                                                <td class="">
+                                                    <a class="product-remove" href="#!">Remove</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="">
+                                                <td class="">
+                                                    <div class="product-info">
+                                                        <img width="80" src="images/shop/cart/cart-3.jpg" alt="" />
+                                                        <a href="#!">Bingo</a>
+                                                    </div>
+                                                </td>
+                                                <td class="">$200.00</td>
+                                                <td class="">
+                                                    <a class="product-remove" href="#!">Remove</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <a href="checkout.html" class="btn btn-main pull-right">Checkout</a>
+
+                                    <a href="/products" class="btn btn-main pull-left">Add another product</a>
+
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-
-    <!--
-Start Call To Action
-==================================== -->
-
-
-
 
 
     <footer class="footer section text-center">
@@ -359,9 +407,7 @@ Start Call To Action
                         <li>
                             <a href="shop.html">SHOP</a>
                         </li>
-                        <li>
-                            <a href="pricing.html">Pricing</a>
-                        </li>
+
                         <li>
                             <a href="contact.html">PRIVACY POLICY</a>
                         </li>
