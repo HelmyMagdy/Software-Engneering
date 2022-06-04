@@ -405,7 +405,7 @@ FACEBOOK:
                             <a href="contact.html">CONTACT</a>
                         </li>
                         <li>
-                            <a href="shop.html">SHOP</a>
+                            <a href="/products">Shop</a>
                         </li>
 
                         <li>

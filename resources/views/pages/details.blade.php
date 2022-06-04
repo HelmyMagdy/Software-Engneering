@@ -1,17 +1,3 @@
-<!--
-THEME: Aviato | E-commerce template
-VERSION: 1.0.0
-AUTHOR: Themefisher
-
-HOMEPAGE: https://themefisher.com/products/aviato-e-commerce-template/
-DEMO: https://demo.themefisher.com/aviato/
-GITHUB: https://github.com/themefisher/Aviato-E-Commerce-Template/
-
-WEBSITE: https://themefisher.com
-TWITTER: https://twitter.com/themefisher
-FACEBOOK:
--->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,21 +18,21 @@ FACEBOOK:
     <meta name="generator" content="Themefisher Constra HTML Template v1.0">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/eama.logo.png" />
+    <link rel="shortcut icon" type="/image/x-icon" href="/images/eama.logo.png" />
 
     <!-- Themefisher Icon font -->
-    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <link rel="stylesheet" href="/plugins/themefisher-font/style.css">
     <!-- bootstrap.min css -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/plugins/bootstrap/css/bootstrap.min.css">
 
     <!-- Animate css -->
-    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <link rel="stylesheet" href="/plugins/animate/animate.css">
     <!-- Slick Carousel -->
-    <link rel="stylesheet" href="plugins/slick/slick.css">
-    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="/plugins/slick/slick.css">
+    <link rel="stylesheet" href="/plugins/slick/slick-theme.css">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 
 </head>
@@ -65,9 +51,9 @@ FACEBOOK:
                 <div class="col-md-4 col-xs-12 col-sm-4">
                     <!-- Site Logo -->
                     <div class="logo text-center">
-                        <a href="index.html">
+                        <a href="/">
                             <div class="col-md-12 col-xs-10 col-sm-4">
-                                <img src="images/eama.logo.png" alt="">
+                                <img src="/images/eama.logo.png" alt="">
                             </div>
                             <!-- replace logo here -->
                             <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1"
@@ -90,7 +76,7 @@ FACEBOOK:
                                 <!-- Cart Item -->
                                 <div class="media">
                                     <a class="pull-left" href="#!">
-                                        <img class="media-object" src="images/shop/cart/cart-1.jpg" alt="image" />
+                                        <img class="media-object" src="/images/shop/cart/cart-1.jpg" alt="image" />
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -105,7 +91,7 @@ FACEBOOK:
                                 <!-- Cart Item -->
                                 <div class="media">
                                     <a class="pull-left" href="#!">
-                                        <img class="media-object" src="images/shop/cart/cart-2.jpg" alt="image" />
+                                        <img class="media-object" src="/images/shop/cart/cart-2.jpg" alt="image" />
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading"><a href="#!">Ladies Bag</a></h4>
@@ -192,7 +178,7 @@ FACEBOOK:
                                         <ul>
                                             <li class="dropdown-header">Pages</li>
                                             <li role="separator" class="divider"></li>
-                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="/products">Shop</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <!-- <li><a href="cart.html">Cart</a></li> -->
                                             <!-- <li><a href="confirmation.html">Confirmation</a></li> -->
@@ -271,17 +257,6 @@ FACEBOOK:
 
 
 
-                        <!-- Shop -->
-                        <!-- <li class="dropdown dropdown-slide">
-      <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
-       role="button" aria-haspopup="true" aria-expanded="false">Elements <span
-        class="tf-ion-ios-arrow-down"></span></a>
-      <ul class="dropdown-menu">
-       <li><a href="typography.html">Typography</a></li>
-       <li><a href="buttons.html">Buttons</a></li>
-       <li><a href="alerts.html">Alerts</a></li>
-      </ul>
-     </li>/ Blog -->
                     </ul><!-- / .nav .navbar-nav -->
 
                 </div>
@@ -294,8 +269,8 @@ FACEBOOK:
             <div class="row">
                 <div class="col-md-6">
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/products">Shop</a></li>
                         <li class="active">Single Product</li>
                     </ol>
                 </div>
@@ -314,29 +289,29 @@ FACEBOOK:
                                 <!-- me art lab slider -->
                                 <div class='carousel-inner '>
                                     <div class='item active'>
-                                        <img src='images/shop/single-products/product-1.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-1.jpg" />
+                                        <img src={{ $product['image'] }} alt=''
+                                            data-zoom-image={{ $product['image'] }} />
                                     </div>
                                     <div class='item'>
-                                        <img src='images/shop/single-products/product-2.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-2.jpg" />
+                                        <img src={{ $product['image'] }}alt=''
+                                            data-zoom-image={{ $product['image'] }} />
                                     </div>
 
                                     <div class='item'>
-                                        <img src='images/shop/single-products/product-3.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-3.jpg" />
+                                        <img src={{ $product['image'] }} alt=''
+                                            data-zoom-image={{ $product['image'] }} />
                                     </div>
                                     <div class='item'>
-                                        <img src='images/shop/single-products/product-4.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-4.jpg" />
+                                        <img src={{ $product['image'] }} alt=''
+                                            data-zoom-image={{ $product['image'] }} />
                                     </div>
                                     <div class='item'>
-                                        <img src='images/shop/single-products/product-5.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-5.jpg" />
+                                        <img src={{ $product['image'] }} alt=''
+                                            data-zoom-image={{ $product['image'] }}/>
                                     </div>
                                     <div class='item'>
-                                        <img src='images/shop/single-products/product-6.jpg' alt=''
-                                            data-zoom-image="images/shop/single-products/product-6.jpg" />
+                                        <img src={{ $product['image'] }} alt=''
+                                            data-zoom-image={{ $product['image'] }} />
                                     </div>
 
                                 </div>
@@ -353,25 +328,25 @@ FACEBOOK:
                             <!-- thumb -->
                             <ol class='carousel-indicators mCustomScrollbar meartlab'>
                                 <li data-target='#carousel-custom' data-slide-to='0' class='active'>
-                                    <img src='images/shop/single-products/product-1.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='1'>
-                                    <img src='images/shop/single-products/product-2.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='2'>
-                                    <img src='images/shop/single-products/product-3.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='3'>
-                                    <img src='images/shop/single-products/product-4.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='4'>
-                                    <img src='images/shop/single-products/product-5.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='5'>
-                                    <img src='images/shop/single-products/product-6.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                                 <li data-target='#carousel-custom' data-slide-to='6'>
-                                    <img src='images/shop/single-products/product-7.jpg' alt='' />
+                                    <img src={{ $product['image'] }} alt='' />
                                 </li>
                             </ol>
                         </div>
@@ -440,12 +415,7 @@ FACEBOOK:
                         <div class="tab-content patternbg">
                             <div id="details" class="tab-pane fade active in">
                                 <h4>Product Description</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum. Sed ut per spici</p>
+                                <p> {{ $product['description'] }}</p>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis delectus quidem
                                     repudiandae veniam distinctio repellendus magni pariatur molestiae asperiores animi,
                                     eos quod iusto hic doloremque iste a, nisi iure at unde molestias enim fugit, nulla
@@ -618,7 +588,7 @@ FACEBOOK:
                             <a href="contact.html">CONTACT</a>
                         </li>
                         <li>
-                            <a href="shop.html">SHOP</a>
+                            <a href="/products">Shop</a>
                         </li>
 
                         <li>
@@ -636,28 +606,28 @@ FACEBOOK:
     =====================================-->
 
     <!-- Main jQuery -->
-    <script src="plugins/jquery/dist/jquery.min.js"></script>
+    <script src="/plugins/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.1 -->
-    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Bootstrap Touchpin -->
-    <script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
     <!-- Instagram Feed Js -->
-    <script src="plugins/instafeed/instafeed.min.js"></script>
+    <script src="/plugins/instafeed/instafeed.min.js"></script>
     <!-- Video Lightbox Plugin -->
-    <script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <script src="/plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
     <!-- Count Down Js -->
-    <script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+    <script src="/plugins/syo-timer/build/jquery.syotimer.min.js"></script>
 
     <!-- slick Carousel -->
-    <script src="plugins/slick/slick.min.js"></script>
-    <script src="plugins/slick/slick-animation.min.js"></script>
+    <script src="/plugins/slick/slick.min.js"></script>
+    <script src="/plugins/slick/slick-animation.min.js"></script>
 
     <!-- Google Mapl -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
-    <script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+    <script type="/text/javascript" src="/plugins/google-map/gmap.js"></script>
 
     <!-- Main Js File -->
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 
 
 

@@ -66,7 +66,7 @@ FACEBOOK:
                 <div class="col-md-4 col-xs-12 col-sm-4">
                     <!-- Site Logo -->
                     <div class="logo text-center">
-                        <a href="index.html">
+                        <a href="/">
                             <div class="col-md-12 col-xs-10 col-sm-4">
                                 <img src="images/eama.logo.png" alt="">
                             </div>
